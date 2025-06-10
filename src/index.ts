@@ -8,6 +8,7 @@ import path from 'path';
 import { SYSTEM_PROMPT } from './prompt';
 
 const PORT = 3000;
+const DOMAIN = "localhost";
 
 const SITES: Record<number, Site> = {};
 
@@ -94,7 +95,7 @@ llm_app.use((async (req, res, next) => {
    sock.end();
 }) as RequestHandler);
 
-app.use(vhost('*.localhost', llm_app));
+app.use(vhost(`*.${DOMAIN}`, llm_app));
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -143,9 +144,9 @@ app.post("/create", (async (req, res) => {
 
    console.log(SITES);
 
-   res.redirect(`http://${id}.localhost:3000`);
+   res.redirect(`http://${id}.${DOMAIN}`);
 }) as RequestHandler);
 
 app.listen(PORT, () => {
-   console.log(`Server is running at http://localhost:${PORT}`);
+   console.log(`Server is running at http://${DOMAIN}:${PORT}`);
 });
