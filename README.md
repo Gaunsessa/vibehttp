@@ -1,5 +1,7 @@
 # Vibe HTTP
 
-Turns an LLM into a webserver.
+Turns a LLM into a webserver.
 
-(vibe.ef.je)[https://vibe.ef.je]
+Given any prompt the LLM will generate raw HTTP responses.
+
+[vibe.ef.je](https://vibe.ef.je)
