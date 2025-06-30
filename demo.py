@@ -127,9 +127,9 @@ def handle_client(conn):
 
     completion = AICLIENT.chat.completions.create(
         extra_body={},
-        # model="meta-llama/llama-4-maverick:free",
+        model="meta-llama/llama-4-maverick:free",
         # model="google/gemini-2.0-flash-001",
-        model="anthropic/claude-3.7-sonnet",
+        # model="anthropic/claude-3.7-sonnet",
         messages=[
             {
                 "role": "system",

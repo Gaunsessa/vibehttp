@@ -144,7 +144,7 @@ app.post("/create", (async (req, res) => {
 
    console.log(SITES);
 
-   res.redirect(`http://${id}.${DOMAIN}`);
+   res.redirect(`https://${id}.${DOMAIN}`);
 }) as RequestHandler);
 
 app.listen(PORT, () => {
